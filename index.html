@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Busca Heurística - IA 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Busca Heurística </h1>
+        <p>Deslocamento: <strong>Base de Atendimento</strong> ➔ <strong>Hospital Central</strong></p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <span>Grafo Urbano da Cidade</span>
+                <span id="status-badge" style="color: var(--warning); font-size: 0.85rem;">Aguardando início</span>
+            </div>
+
+            <div class="controls">
+                <select id="sel-heuristica">
+                    <option value="original">Heurística Original (Ilusão pelo Aeroporto)</option>
+                    <option value="modificada">Heurística Modificada (Rota Otimizada)</option>
+                </select>
+                <button id="btn-run">▶ Executar</button>
+                <button id="btn-step" class="btn-step">⏭ Passo a Passo</button>
+                <button id="btn-reset" class="btn-reset">↺ Reiniciar</button>
+            </div>
+
+            <div class="svg-container">
+                <svg id="svg-graph" viewBox="0 0 660 410"></svg>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><div class="dot" style="background:var(--warning);"></div> Expandido Atual</div>
+                <div class="legend-item"><div class="dot" style="background:var(--success);"></div> Caminho Encontrado</div>
+                <div class="legend-item"><div class="dot" style="background:var(--danger);"></div> Beco Sem Saída (Aeroporto)</div>
+            </div>
+        </div>
+
+        <!-- Lado Direito: Passo a Passo & Tabela -->
+        <div style="display:flex; flex-direction:column; gap:18px;">
+            <div class="card">
+                <div class="card-header">
+                    <span>Decisões Passo a Passo</span>
+                    <span id="step-label" style="font-size: 0.8rem; color: var(--text-muted);">Passo 0</span>
+                </div>
+                <div id="log-list" class="log-box">
+                    <span style="color: #64748b;">Clique em <b>Executar</b> ou <b>Passo a Passo</b> para começar.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>Resultados & Tabela Comparativa</span>
+                </div>
+                <div id="res-resumo" style="font-size: 0.88rem; line-height: 1.5; margin-bottom: 12px; color: #cbd5e1;">
+                    Aguardando execução da busca...
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critério</th>
+                            <th>Heurística Original</th>
+                            <th>Heurística Modificada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Caminho</strong></td>
+                            <td>Base ➔ Rodoviária ➔ Terminal ➔ Hospital</td>
+                            <td>Base ➔ Centro ➔ Shopping ➔ Hospital</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qtd. Visitados</strong></td>
+                            <td>5 estados</td>
+                            <td>4 estados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qtd. Expandidos</strong></td>
+                            <td>4 (cai no Aeroporto)</td>
+                            <td>3 (direto ao objetivo)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desvio Falso</strong></td>
+                            <td style="color:var(--danger);">Sim (Aeroporto h=2)</td>
+                            <td style="color:var(--success);">Não (evitado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
