@@ -1,4 +1,4 @@
-# Simulação de Busca Gulosa (Greedy Best-First Search)
+Trabalho IA, Busca Heurística 
 
 ## Estrutura do Projeto
 - `index.html`: Estrutura da página, painéis e elementos SVG.
