@@ -50,7 +50,7 @@ const heuristicas = {
 // Pega a tela de desenho onde vamos pintar o mapa.
 const svg = document.getElementById('svg-graph');
 
-// Guarda a memoria do jogo da busca a cada segundo
+// Guarda a memoria do sistema da busca a cada segundo
 let state = null;
 
 function desenhar() {
