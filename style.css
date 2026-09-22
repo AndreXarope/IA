@@ -167,15 +167,3 @@
 
         th { background: #0f172a; color: #93c5fd; }
         tr:nth-child(even) { background: #162032; }
-
-        .legend {
-            display: flex;
-            gap: 12px;
-            margin-top: 10px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            flex-wrap: wrap;
-        }
-
-        .legend-item { display: flex; align-items: center; gap: 5px; }
-        .dot { width: 12px; height: 12px; border-radius: 50%; }

@@ -22,26 +22,20 @@
 
             <div class="controls">
                 <select id="sel-heuristica">
-                    <option value="original">Heurística Original (Ilusão pelo Aeroporto)</option>
+                    <option value="original">Heurística Original (Beco pelo Aeroporto)</option>
                     <option value="modificada">Heurística Modificada (Rota Otimizada)</option>
                 </select>
-                <button id="btn-run">▶ Executar</button>
-                <button id="btn-step" class="btn-step">⏭ Passo a Passo</button>
-                <button id="btn-reset" class="btn-reset">↺ Reiniciar</button>
+                <button id="btn-run">Executar</button>
+                <button id="btn-step" class="btn-step">Passo a Passo</button>
+                <button id="btn-reset" class="btn-reset">Reiniciar</button>
             </div>
 
             <div class="svg-container">
                 <svg id="svg-graph" viewBox="0 0 660 410"></svg>
             </div>
 
-            <div class="legend">
-                <div class="legend-item"><div class="dot" style="background:var(--warning);"></div> Expandido Atual</div>
-                <div class="legend-item"><div class="dot" style="background:var(--success);"></div> Caminho Encontrado</div>
-                <div class="legend-item"><div class="dot" style="background:var(--danger);"></div> Beco Sem Saída (Aeroporto)</div>
-            </div>
         </div>
 
-        <!-- Lado Direito: Passo a Passo & Tabela -->
         <div style="display:flex; flex-direction:column; gap:18px;">
             <div class="card">
                 <div class="card-header">
