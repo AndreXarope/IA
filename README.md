@@ -6,7 +6,5 @@
 - `script.js`: Grafo, lista de adjacências, heurísticas e motor de busca.
 
 ## Como Executar
-1. Clone este repositório:
-   `git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git`
-2. Abra o arquivo `index.html` diretamente em qualquer navegador web moderno.
-3. Utilize os botões **Passo a Passo** ou **Executar** para acompanhar a exploração da busca.
+1. Abra o arquivo `index.html` diretamente em qualquer navegador web moderno.
+2. Utilize os botões **Passo a Passo** ou **Executar** para acompanhar a exploração da busca.
